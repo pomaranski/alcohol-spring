@@ -1,0 +1,39 @@
+<ehcache xmlns="http://ehcache.org/"
+         targetNamespace="http://ehcache.org/" version="1.7">
+
+    <diskStore path="java.io.tmpdir"/>
+
+    <cache name="brandCache"
+           maxEntriesLocalHeap="1000"
+           maxEntriesLocalDisk="100"
+           eternal="false"
+           diskSpoolBufferSizeMB="20"
+           timeToIdleSeconds="300" timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+
+    <cache name="kindCache"
+           maxEntriesLocalHeap="1000"
+           maxEntriesLocalDisk="100"
+           eternal="false"
+           diskSpoolBufferSizeMB="20"
+           timeToIdleSeconds="300" timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+
+    <cache name="alcoholCache"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="1000"
+           eternal="false"
+           diskSpoolBufferSizeMB="20"
+           timeToIdleSeconds="300" timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+
+</ehcache>
